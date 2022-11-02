@@ -11,6 +11,7 @@ app = FastAPI()
 async def get_player_grouped_stats(player_id: int = 619, stat_type: str = 'season'):
     loop = asyncio.get_event_loop()
     data = loop.run_until_complete(uf.get_player_grouped_stats(player_id, stat_type))
+    print(f"Player id: {player_id}, stat_type: {stat_type} added.")
     return data
 
 

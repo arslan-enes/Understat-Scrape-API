@@ -1,5 +1,7 @@
-from pymongo_get_database import get_database
 import requests
+import sys
+sys.path.insert(0, '../..')
+from database.pymongo_get_database import get_database
 
 
 def update_player_ids():
